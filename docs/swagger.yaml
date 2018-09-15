@@ -562,6 +562,16 @@ components:
         lastName:
           type: string
           example: Karasev
+        deviceType:
+          type: string
+          enum: [ios|android|web|other]
+        deviceOs:
+          type: string
+          description: Android SDK / iOS version. Requied for mobile only.
+        deviceId:
+          description: IMEI. Requied for mobile only.
+          type: string
+          example: 1237987834798375349
   securitySchemes:
     Bearer:
       type: apiKey
