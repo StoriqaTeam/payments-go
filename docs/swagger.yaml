@@ -371,6 +371,16 @@ components:
           $ref: '#/components/schemas/OauthJWT'
         oauthProvider:
           $ref: '#/components/schemas/OauthProvider'
+        deviceType:
+          type: string
+          enum: [ios|android|web|other]
+        deviceOs:
+          type: string
+          description: Android SDK / iOS version. Requied for mobile only.
+        deviceId:
+          description: IMEI. Requied for mobile only.
+          type: string
+          example: 1237987834798375349
     Value:
       type: integer
       format: uint256
@@ -496,10 +506,7 @@ components:
       example: jghkdfgdjfgkdf7gd
     OauthProvider:
       type: string
-      enum:
-        - facebook
-        - google
-      example: facebook
+      enum: [facebook|google]
     Role:
       type: string
       enum:
