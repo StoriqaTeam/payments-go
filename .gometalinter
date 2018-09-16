@@ -1,0 +1,4 @@
+{
+  "Exclude": ["exported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported"]
+  "Exclude": ["exported const \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported"]
+}
