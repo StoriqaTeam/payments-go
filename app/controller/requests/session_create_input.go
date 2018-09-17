@@ -7,9 +7,9 @@ import (
 )
 
 type SessionCreateInput struct {
-	email      string
-	password   string
-	deviceType models.DeviceType
-	deviceOs   sql.NullString
-	deviceId   sql.NullString
+	Email      string
+	Password   string
+	DeviceType models.DeviceType
+	DeviceOs   sql.NullString
+	DeviceId   sql.NullString
 }

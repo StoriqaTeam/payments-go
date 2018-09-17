@@ -25,7 +25,7 @@ func (c *Controller) HandleSessionCreate(w http.ResponseWriter, r *http.Request)
 		return
 	}
 	var input requests.SessionCreateInput
-	fmt.Printf("%s\n", body)
+	fmt.Printf("Body: %s\n", body)
 	if err = json.Unmarshal(body, &input); err != nil {
 		err := errors.Wrap(err, "error parsing json")
 		log.Errorf("%+v", err)
@@ -33,7 +33,7 @@ func (c *Controller) HandleSessionCreate(w http.ResponseWriter, r *http.Request)
 		return
 	}
 	// s, _ := json.Marshal(input)
-	fmt.Printf("%+v\n", input)
+	fmt.Printf("Input: %+v\n", input)
 	w.WriteHeader(http.StatusOK)
 	fmt.Fprint(w, "Success")
 }
