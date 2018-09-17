@@ -1,10 +1,10 @@
 package requests
 
 type UserCreateInput struct {
-	Email     string
-	Password  string
-	Phone     string
-	FirstName string
-	LastName  string
+	Email     string `validate:"required"`
+	Password  string `validate:"required"`
+	Phone     string `validate:"required"`
+	FirstName string `validate:"required"`
+	LastName  string `validate:"required"`
 	DeviceData
 }

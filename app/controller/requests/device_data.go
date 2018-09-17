@@ -6,7 +6,7 @@ import (
 )
 
 type DeviceData struct {
-	DeviceType models.DeviceType `validate:"required"`
+	DeviceType models.DeviceType
 	DeviceOs   null.String
 	DeviceId   null.String
 }
