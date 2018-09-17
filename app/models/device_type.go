@@ -42,7 +42,6 @@ func (d *DeviceType) MarshalJSON() ([]byte, error) {
 }
 
 func (d *DeviceType) UnmarshalJSON(b []byte) error {
-	// unmarshal as string
 	var s string
 	err := json.Unmarshal(b, &s)
 	if err != nil {
@@ -51,7 +50,7 @@ func (d *DeviceType) UnmarshalJSON(b []byte) error {
 	if value, ok := toEnumMap[s]; ok {
 		*d = value
 	} else {
-		return errors.Errorf("Failed to parse enum DeviceType").Wrap("value: %s", s)
+		return errors.Errorf("Failed to parse enum DeviceType from value `%s`", s)
 	}
 	return nil
 }

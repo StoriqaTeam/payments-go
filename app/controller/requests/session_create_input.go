@@ -1,8 +1,7 @@
 package requests
 
 import (
-	"database/sql"
-
+	"github.com/guregu/null"
 	"github.com/storiqateam/payments/app/models"
 )
 
@@ -10,6 +9,6 @@ type SessionCreateInput struct {
 	Email      string
 	Password   string
 	DeviceType models.DeviceType
-	DeviceOs   sql.NullString
-	DeviceId   sql.NullString
+	DeviceOs   null.String
+	DeviceId   null.String
 }
