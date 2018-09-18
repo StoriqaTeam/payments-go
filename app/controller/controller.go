@@ -32,7 +32,6 @@ func (c *Controller) HandleSessionCreate(w http.ResponseWriter, r *http.Request)
 		http.Error(w, "Can't parse json", http.StatusUnprocessableEntity)
 		return
 	}
-	// s, _ := json.Marshal(input)
 	fmt.Printf("Input: %+v\n", input)
 	w.WriteHeader(http.StatusOK)
 	fmt.Fprint(w, "Success")
